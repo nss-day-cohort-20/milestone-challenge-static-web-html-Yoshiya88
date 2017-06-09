@@ -32,7 +32,7 @@ header {
 	height: 300px;
 	background: 
         /*linear-gradient(0deg, #000, transparent),*/
-        #000 url('../images/skywave2.jpg') no-repeat center;
+        url('../images/skywave2.jpg') no-repeat center;
 	background-size: cover;
 }
 
@@ -124,17 +124,29 @@ h1 {
 	/*background-color: #FAFAFA;*/
 	background-color: rgba(250, 250, 250, 0.5)
 	height: 600px;
+	z-index: 1;
+}
 
-	background-image:  url('../images/wavy.png');
-	background-repeat: no-repeat;
-    background-size: cover;
-    background: linear-gradient(0deg, transparent);
+.bgimg {
+	/*background-image:  url('../images/wavy.png');*/
+	-webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0))); 
+	float: left;
+	width: 66.7%;
+	position: absolute;
 
-/*vvvImage to transparent...?vvv*/
+	/*background-repeat: no-repeat;*/
+   /* background-size: cover;*/
+    z-index: -1;
+  }
+ 
+/*vvv...Image to transparent...?vvv*/
+
+/*background: linear-gradient(0deg, transparent);*/
+
 /*-webkit-mask-image:-webkit-gradient(linear, to bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)))*/
 
 /*-webkit-gradient(linear, top, rgba(0,0,0,0.5), rgba(200,20,200,0.5), url('../images/wavy.png'));*/
-}
+
 
 /*----------------------------------*/
 
@@ -194,7 +206,7 @@ ul.imglinks.column li {
 .navlinks li a {
 	display: block;
 	text-decoration: none;
-	color: white;
+	color: #EBEBEB;
 	padding: 12px 15px;
 }
 
@@ -207,4 +219,21 @@ ul.imglinks.column li {
 	bottom: 0px;
 	right: 0px;
 	width: 33.3%;
+}
+
+.copyright {
+	list-style-type: none;
+	padding: 0;
+    margin: 0;
+	float: left;
+    width: 66.7%;
+	background-color: #5C5C5C;
+}
+
+.copyright p {
+	color: #EBEBEB;
+	padding: 12px 15px;
+	display: block;
+	text-decoration: none;
+	margin: 0;
 }
